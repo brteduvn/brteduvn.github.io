@@ -54,5 +54,5 @@ export default function App(){
  {error&&<p className="error" role="alert">{error}</p>}{message&&<p className="success" role="status">{message}</p>}
  </section>
  <aside className="bottom"><div><h3>Chỉ những gì bạn cần.</h3><p>Không đăng ký • Không gửi dữ liệu lên máy chủ • Luôn miễn phí</p></div><a href="https://github.com/brteduvn/eduplan-oss">Xem mã nguồn ↗</a></aside></main>
- <footer>EduPlan OSS v0.1.0 • Bản thử nghiệm cần kiểm tra tài liệu trước khi sử dụng chính thức</footer></div>;
+ <footer>EduPlan OSS v{__EDUPLAN_BUILD_INFO__.version} • Build: {__EDUPLAN_BUILD_INFO__.builtAtVietnam} • Bản thử nghiệm, cần kiểm tra tài liệu trước khi sử dụng chính thức</footer></div>;
 }
