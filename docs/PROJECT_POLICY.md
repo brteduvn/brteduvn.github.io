@@ -10,6 +10,7 @@ ChatGPT authors all code, fixes, tests and documents. WebCodex is a tool for exp
 - Run typecheck, tests, dependency audit and production build on that exact version.
 - Build emits `dist/build-info.json` with version, UTC time and Vietnam local time. UI footer displays the same embedded build information.
 - Every released version has a Git commit and an immutable annotated tag; no force-push or rewriting tags.
+- EduPlan OSS tag pushes trigger GitHub Actions to independently validate, generate a fresh build timestamp and publish a prerelease with a SHA-256 manifest. This does not replace Dell QA or Mac 2012 backups.
 - Record SHA-256 of source archive, build artifacts and backup files, release notes, environment, test outcomes and timestamp.
 - The Git *commit* captures source; artifacts/archives must be recoverable from a timestamped backup. Never equate a successful build with full user-acceptance testing.
 

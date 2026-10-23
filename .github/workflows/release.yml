@@ -1,0 +1,68 @@
+name: Publish versioned release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    name: Validate, package and publish
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out exact release tag
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install exact dependencies
+        run: npm ci
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Test
+        run: npm test
+
+      - name: Dependency audit
+        run: npm audit --audit-level=moderate
+
+      - name: Build with embedded timestamp
+        run: npm run build
+
+      - name: Verify tag, version and release notes
+        shell: bash
+        run: |
+          set -euo pipefail
+          version="$(node -p "JSON.parse(require('fs').readFileSync('package.json','utf8')).version")"
+          test "$GITHUB_REF_NAME" = "v$version"
+          test -f "docs/RELEASE_NOTES_${GITHUB_REF_NAME}.md"
+          node -e "const b=require('./dist/build-info.json');const p=require('./package.json'); if(b.version!==p.version||!b.builtAtUTC||!b.builtAtVietnam)process.exit(1)"
+          echo "Verified ${GITHUB_REF_NAME} build at $(node -p "require('./dist/build-info.json').builtAtUTC")"
+
+      - name: Create downloadable Web App archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          (cd dist && zip -q -r "../eduplan-oss-${GITHUB_REF_NAME}-web.zip" .)
+          sha256sum "eduplan-oss-${GITHUB_REF_NAME}-web.zip" > SHA256SUMS.txt
+
+      - name: Create GitHub prerelease
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh release create "$GITHUB_REF_NAME"             "eduplan-oss-${GITHUB_REF_NAME}-web.zip" SHA256SUMS.txt             --repo "$GITHUB_REPOSITORY"             --verify-tag             --title "EduPlan OSS ${GITHUB_REF_NAME} (release candidate)"             --notes-file "docs/RELEASE_NOTES_${GITHUB_REF_NAME}.md"             --prerelease             --latest=false

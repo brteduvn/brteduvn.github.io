@@ -2,12 +2,13 @@
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![CI](https://github.com/brteduvn/eduplan-oss/actions/workflows/ci.yml/badge.svg)](https://github.com/brteduvn/eduplan-oss/actions/workflows/ci.yml)
-[![Status: Release candidate](https://img.shields.io/badge/status-release%20candidate-orange.svg)](docs/RELEASE_NOTES_v0.1.1-rc.1.md)
+[![Release workflow](https://github.com/brteduvn/eduplan-oss/actions/workflows/release.yml/badge.svg)](https://github.com/brteduvn/eduplan-oss/actions/workflows/release.yml)
+[![Status: Release candidate](https://img.shields.io/badge/status-release%20candidate-orange.svg)](docs/RELEASE_NOTES_v0.1.1-rc.2.md)
 ![Vietnam-first](https://img.shields.io/badge/language-Vietnamese%20first-blue.svg)
 
 **EduPlan OSS is a free, privacy-first, open-source web app for teachers.** Start with real Vietnamese education workflows, then extend internationally through reusable formats and locale-specific templates.
 
-**Current status: v0.1.1-rc.1 — limited working prototype.** Not a certified curriculum or policy compliance checker. Features labelled *planned* are not implemented yet.
+**Current status: v0.1.1-rc.2 — limited working prototype.** Not a certified curriculum or policy compliance checker. Features labelled *planned* are not implemented yet.
 
 ## 🇻🇳 Dành cho giáo viên Việt Nam
 
