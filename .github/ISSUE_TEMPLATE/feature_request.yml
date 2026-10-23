@@ -1,0 +1,16 @@
+name: Đề xuất tính năng / Feature request
+description: Góp ý cải tiến trải nghiệm người dùng
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Vấn đề giáo viên đang gặp / Educator problem
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Trải nghiệm mong muốn / Desired behavior
+    validations:
+      required: true

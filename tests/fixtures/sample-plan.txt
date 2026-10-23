@@ -1,0 +1,7 @@
+Trường: THCS Minh Họa
+Môn học: Giáo dục địa phương
+Lớp: 6
+Giáo viên: Nguyễn Văn Mẫu
+Tên kế hoạch: Kiểm thử EduPlan OSS
+Tuần 1: Giới thiệu địa phương
+Tuần 2: Kiến thức văn hóa

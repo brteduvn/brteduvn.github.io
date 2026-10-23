@@ -1,0 +1,29 @@
+name: Báo lỗi / Bug report
+description: Báo lỗi với dữ liệu ẩn danh / Report defects with anonymized data
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: 'Không đăng tải dữ liệu học sinh hoặc tài liệu nội bộ. / Never upload student data.'
+  - type: textarea
+    id: steps
+    attributes:
+      label: Các bước tái hiện / Steps to reproduce
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Kết quả mong đợi / Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Kết quả thực tế / Actual behavior
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Trình duyệt, hệ điều hành / Browser and OS
