@@ -1,25 +1,34 @@
-# Roadmap (proposals, not shipped features)
+# EduPlan OSS roadmap / Lộ trình
 
-## 0.1 • Working browser prototype
-- DOCX, XLSX, CSV, TXT and MD ingestion
-- Structured field review and editable DOCX export
-- User-supplied DOCX with explicit placeholders
-- No accounts, paid APIs or uploads
+## Shipped in beta v0.2.0-rc.1
+- Intuitive three-step Vietnamese workflow and responsive Web App
+- Blank document creation and drag-and-drop multi-file input
+- DOCX / XLSX / text PDF / CSV / TXT / Markdown import
+- Editable content and metadata suggestions
+- A4 Word export and browser Print/Save PDF
+- DOCX templates with explicit placeholders, even across split runs
+- Browser-local draft autosave and clear
+- Installable PWA + basic offline cache, versioned build metadata
+- GitHub Pages deployment and GitHub Release automation
+- Automated unit tests, TypeScript validation, dependency audit
 
-## 0.2 • Quality and accessibility
-- Genuine in-browser drag/drop, keyboard/a11y tests, safe save/restore
-- DOCX template validator, downloadable starter DOCX sample
-- Better table fidelity and regression fixtures
-- E2E multi-browser tests
+## Next: robust document fidelity and QA
+- Real-world complex table and section regression fixtures with permission
+- Word document visual comparison (A4 margins, long tables, fonts)
+- Mobile and cross-browser accessibility passes, keyboard E2E tests
+- Larger document handling and saved template presets
+- Optional OCR for scanned PDFs/photographs with no paid API
+- Improved PWA storage/recovery indicators
 
-## 0.3 • Education planning modules
-- Vietnam curriculum rules as configurable data, PPCT validation, weekly and period totals
-- DOCX template gallery with provenance/permission
-- PDF text extraction with clear limitations
+## Vietnam curriculum toolkit
+- Structured PPCT parsing and period/week consistency checks
+- Configurable policies/data-pack separate from core
+- School template library with provenance, attribution and review
+- Rule-based deterministic checks instead of opaque AI judgments
 
-## 0.4+
-- Local AI opt-in on supported devices, evaluated for Vietnamese writing quality
-- Offline-capable PWA with opt-in file persistence
-- i18n templates/locale packs and contributions from other countries
+## International ecosystem
+- Separate locales / content packs; Vietnamese first, English second
+- Optional free local AI on capable devices after quality evaluation
+- Composable open-source modules for third-party integrations
 
-See issues for scoped deliverables. No release date promises.
+**Evidence over claims:** Features count as shipped only after passing appropriate QA. No artificial usage metrics or fake community contributors. No deadline commitments.

@@ -1,7 +1,7 @@
 # Development, versioning and backup policy / Quy tắc phát triển
 
 ## Scope
-**Only** `brteduvn/eduplan-oss` is a public GitHub repository. Other projects remain local and must not be pushed to GitHub, any public remote, or another third-party cloud.
+**Only** `brteduvn/brteduvn.github.io` (website `https://brteduvn.github.io/`) is a public GitHub repository. Other projects remain local and must not be pushed to GitHub, any public remote, or another third-party cloud.
 
 ChatGPT authors all code, fixes, tests and documents. WebCodex is a tool for explicitly instructed build/test/log collection, versioned packaging, verified local Git operations and approved releases. Never let it autonomously rewrite code, change other projects, reset or restart existing runners, tunnels or services.
 

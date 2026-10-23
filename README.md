@@ -1,93 +1,106 @@
-# EduPlan OSS
+# EduPlan OSS 🇻🇳
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![CI](https://github.com/brteduvn/eduplan-oss/actions/workflows/ci.yml/badge.svg)](https://github.com/brteduvn/eduplan-oss/actions/workflows/ci.yml)
-[![Release workflow](https://github.com/brteduvn/eduplan-oss/actions/workflows/release.yml/badge.svg)](https://github.com/brteduvn/eduplan-oss/actions/workflows/release.yml)
-[![Status: Release candidate](https://img.shields.io/badge/status-release%20candidate-orange.svg)](docs/RELEASE_NOTES_v0.1.1-rc.2.md)
-![Vietnam-first](https://img.shields.io/badge/language-Vietnamese%20first-blue.svg)
+[![MIT License](https://img.shields.io/badge/license-MIT-148569.svg)](LICENSE)
+[![Quality checks](https://github.com/brteduvn/brteduvn.github.io/actions/workflows/ci.yml/badge.svg)](https://github.com/brteduvn/brteduvn.github.io/actions/workflows/ci.yml)
+[![Web deployment](https://github.com/brteduvn/brteduvn.github.io/actions/workflows/pages.yml/badge.svg)](https://github.com/brteduvn/brteduvn.github.io/actions/workflows/pages.yml)
+[![Stage](https://img.shields.io/badge/stage-public%20beta-orange)](ROADMAP.md)
 
-**EduPlan OSS is a free, privacy-first, open-source web app for teachers.** Start with real Vietnamese education workflows, then extend internationally through reusable formats and locale-specific templates.
+**A free, privacy-first, open-source education planning web app. Vietnam first, international-ready architecture later.**
 
-**Current status: v0.1.1-rc.2 — limited working prototype.** Not a certified curriculum or policy compliance checker. Features labelled *planned* are not implemented yet.
+<details>
+<summary>📷 Xem giao diện trên máy tính và điện thoại / Screenshots</summary>
 
-## 🇻🇳 Dành cho giáo viên Việt Nam
+<img src="docs/images/desktop.png" width="760" alt="EduPlan OSS on desktop" />
+<img src="docs/images/mobile.png" width="250" alt="EduPlan OSS on mobile" />
 
-Không cần tạo tài khoản, không yêu cầu API trả phí, không tự tải tài liệu lên máy chủ. Quy trình trên trình duyệt chỉ gồm **3 bước: Chọn tài liệu → Xem lại → Tải Word**.
+</details>
 
-### Có gì ở bản thử nghiệm?
+### 🔗 Đường dẫn ngắn, dễ nhớ
 
-| Nhu cầu | Đã hỗ trợ | Lưu ý |
+- **Ứng dụng web (GitHub Pages):** https://brteduvn.github.io/ — sau khi bật GitHub Pages cho repository.
+- **Mã nguồn:** https://github.com/brteduvn/brteduvn.github.io
+- **Liên hệ:** admin@brt.edu.vn
+
+## Tiếng Việt
+
+**EduPlan OSS** giúp giáo viên tạo kế hoạch giáo dục theo quy trình trực quan:
+
+**Chọn tài liệu → Kiểm tra và chỉnh sửa → Tải Word / In thành PDF**
+
+Không cần đăng ký tài khoản, không yêu cầu API AI trả phí, không gửi tài liệu của người dùng lên máy chủ.
+
+### Chức năng hiện có — v0.2.0-rc.2
+
+| Chức năng | Trạng thái | Giới hạn |
 |---|---|---|
-| Đọc file Word | `.docx` | Trích xuất văn bản, chưa bảo đảm giữ bảng và bố cục phức tạp |
-| Đọc file Excel | `.xlsx` | Đọc nội dung bảng cơ bản |
-| Đọc văn bản | `.txt`, `.md`, `.csv` | CSV hiện đọc như văn bản |
-| Chọn nhiều tệp | Có | Giới hạn 12 MB/tệp; nội dung tổng có giới hạn để bảo vệ giao diện |
-| Xem và chỉnh sửa thông tin | Có | Tự nhận diện một số trường tiếng Việt, giáo viên xác nhận kết quả |
-| Xuất Word cơ bản | Có | Tạo DOCX có thể sửa tiếp trong Word |
-| Xuất theo Word của trường | Có điều kiện | Dùng thẻ rõ ràng trong mẫu DOCX; **chưa tự hiểu mọi mẫu** |
-| AI miễn phí, PDF scan/OCR, quy tắc PPCT | Chưa | Trong [lộ trình](ROADMAP.md) |
+| Tạo mới không cần file | Có | Nội dung điền và chỉnh sửa thủ công |
+| Nhập nhiều Word DOCX | Có | Trích văn bản; bảng định dạng phức tạp có thể chưa giữ nguyên |
+| Nhập Excel XLSX | Có | Đọc dữ liệu cơ bản từ trang tính |
+| Nhập PDF có lớp văn bản | Có | PDF scan/ảnh **chưa** hỗ trợ OCR |
+| CSV, TXT, Markdown | Có | CSV có dấu phân cách và văn bản trong ngoặc kép |
+| Chỉnh sửa trường và nội dung | Có | Gợi ý trường chỉ mang tính tham khảo |
+| Tự lưu và tiếp tục bản nháp | Có | Lưu trong trình duyệt hiện tại, không đồng bộ thiết bị khác |
+| Xuất Word A4 | Có | Mẫu đơn giản, Times New Roman 13pt; nên kiểm tra bố cục |
+| Sử dụng mẫu DOCX riêng | Có | Mẫu cần đánh dấu thẻ; một số cấu trúc OOXML phức tạp chưa hỗ trợ |
+| In hoặc lưu PDF | Có | Sử dụng chức năng in/lưu PDF của trình duyệt |
+| Web App cài lên màn hình chính | Có | PWA; trình duyệt và thiết bị cần hỗ trợ |
+| Dùng offline sau lần mở thành công | Cơ bản | Cache bộ ứng dụng; không bảo đảm mọi đường dẫn/tệp ngoài được cache |
+| AI miễn phí và kiểm tra PPCT theo quy định | Chưa | Phát triển và kiểm chứng trong các phiên bản sau |
 
-### Tải mẫu Word của bạn
+**Cam kết về sự đơn giản:** Không bắt xem hướng dẫn; thao tác chính được trình bày trực tiếp, gợi ý ngắn theo ngữ cảnh.
 
-1. Mở ứng dụng, nhập tài liệu và kiểm tra nội dung.
-2. Chọn **Mẫu Word của tôi**, hoặc tải **mẫu tham khảo .docx**.
-3. Đặt các thẻ tại nơi muốn điền: `{{school}}`, `{{subject}}`, `{{grade}}`, `{{teacher}}`, `{{title}}`, `{{content}}`.
-4. Mỗi thẻ phải nằm nguyên trong một đoạn ký tự Word (OOXML text run). Nếu Word tự chia thẻ thành nhiều run, phiên bản này chưa thể tự ghép. Kiểm tra file DOCX tải về trước khi dùng chính thức.
+### Tải Word theo mẫu trường
 
-### Cài chạy trên máy (Node.js 22+)
+Chọn **Word theo mẫu của tôi** ở bước xuất. Mở Word và gõ các thẻ sau vào vị trí cần điền:
 
-```bash
-git clone https://github.com/brteduvn/eduplan-oss.git
-cd eduplan-oss
+- \`{{school}}\` · \`{{subject}}\` · \`{{grade}}\` · \`{{teacher}}\`
+- \`{{title}}\` · \`{{content}}\`
+
+Có thể tải mẫu DOCX tham khảo ngay trong Web App. Trình điền mẫu có thể nhận dạng các thẻ bị Word chia giữa nhiều text run nhưng vẫn có trường hợp biểu mẫu đặc biệt phải kiểm tra thủ công.
+
+### Quyền riêng tư
+
+Dữ liệu nguồn được xử lý **trong trình duyệt**, bản nháp được tự lưu bằng bộ nhớ cục bộ của trình duyệt. Dùng máy công cộng? Hãy nhấn **Bắt đầu lại / Xóa bản nháp** sau khi xuất xong. Nếu xóa dữ liệu trình duyệt hoặc đổi thiết bị, bản nháp có thể mất. Không tải tài liệu học sinh thật lên Issues/PRs. Xem [PRIVACY.md](PRIVACY.md).
+
+## English
+
+EduPlan OSS is a browser-based, local-first document planning toolkit for educators. The public beta supports multi-format text extraction (DOCX/XLSX/text-based PDF/CSV/TXT/MD), editing, a browser-saved draft, editable A4 Word export and custom placeholder-based DOCX templates, plus browser printing to PDF.
+
+**Limitations:** This is *not* a certified Vietnam curriculum validator. Arbitrary Word layout inference, OCR of scanned PDFs, local free AI, and international curriculum packs are not yet implemented. New features are not advertised as shipped until verified.
+
+### Build and test
+
+Requirements: Node.js **22+** and npm.
+
+\`\`\`bash
+git clone https://github.com/brteduvn/brteduvn.github.io.git
+cd brteduvn.github.io
 npm ci
 npm run dev
-```
+\`\`\`
 
-Mở URL mà Vite hiển thị. Các lệnh kiểm tra:
+Quality gates before publishing:
 
-```bash
+\`\`\`bash
 npm run typecheck
 npm test
-npm run build
 npm audit --audit-level=moderate
-```
+npm run build
+npm run test:e2e
+\`\`\`
 
-Bản build nằm trong `dist/`. File `dist/build-info.json` ghi **phiên bản và thời điểm build theo UTC + giờ Việt Nam**; chân trang giao diện hiển thị cùng thông tin. `dist/` là output được sinh ra, không lưu vào Git.
+The version, UTC timestamp and Vietnam build time are embedded into \`dist/build-info.json\` and the interface footer. Every release uses an incremented SemVer version, a Git commit/tag and a checksum manifest. [Release workflow](.github/workflows/release.yml) packages the Web App, and [Pages workflow](.github/workflows/pages.yml) deploys the live site. To enable the live link, see [DEPLOYMENT.md](docs/DEPLOYMENT.md).
 
-### Lưu ý dữ liệu
+### Development and community
 
-Tài liệu được xử lý trên trình duyệt và tồn tại tạm trong bộ nhớ. Trang chưa có tính năng tự lưu công việc khi tải lại. Không đăng tài liệu thật có thông tin học sinh lên Issues, Pull Requests hoặc dịch vụ kiểm thử công khai. Mã nguồn không có backend nhận tài liệu hay telemetry; môi trường lưu trữ trang web vẫn có thể thu thập access logs tiêu chuẩn.
+- Frontend: React 19, TypeScript, Vite, responsive CSS, installable PWA.
+- Processing: JSZip and DOCX, read-excel-file, pdfjs-dist (loaded when needed).
+- Tests: Vitest and manual browser QA. Planned: device matrix and visual Word regression tests.
+- [Roadmap](ROADMAP.md) · [Architecture](docs/ARCHITECTURE.md) · [Contributing](CONTRIBUTING.md)
+- [Security](SECURITY.md) · [Privacy](PRIVACY.md) · [Code of Conduct](CODE_OF_CONDUCT.md)
+- [Release policy and backups](docs/PROJECT_POLICY.md) · [Changelog](CHANGELOG.md)
+- [License MIT](LICENSE)
 
----
+Maintainer: **[@brteduvn](https://github.com/brteduvn)** · **admin@brt.edu.vn**.
 
-## 🌍 English
-
-**EduPlan OSS** is a Vietnam-first, local-processing, open-source education document helper. The current release candidate provides a simple browser workflow for importing basic DOCX/XLSX/plain-text content, reviewing fields and exporting editable DOCX. You can supply a DOCX template with explicit placeholders.
-
-There is **no required account, server document upload, paid AI service or telemetry**. Advanced Word layout inference, OCR, Vietnamese curriculum validation, offline service worker, local AI models and internationalized curriculum packs are planned, *not currently shipped*.
-
-### For developers
-
-- Stack: React, TypeScript, Vite, JSZip, read-excel-file, docx, Vitest.
-- Run checks: `npm ci && npm run typecheck && npm test && npm run build`.
-- Browser UI in `src/App.tsx`; format conversion in `src/lib/document.ts`; regression tests in `tests/`.
-- Releases follow SemVer prerelease tags and record timestamped build metadata.
-- Please review [architecture](docs/ARCHITECTURE.md), [roadmap](ROADMAP.md) and [project policy](docs/PROJECT_POLICY.md) before larger changes.
-
-### Community and trust
-
-| Resource | Details |
-|---|---|
-| Contribution guide | [CONTRIBUTING.md](CONTRIBUTING.md) |
-| Community standards | [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) |
-| Security reports | [SECURITY.md](SECURITY.md) |
-| Privacy | [PRIVACY.md](PRIVACY.md) |
-| Releases and evidence | [CHANGELOG.md](CHANGELOG.md) · [QA report](docs/QA_REPORT_2026-10-23.md) |
-| Versioned backups | [Project policy](docs/PROJECT_POLICY.md) |
-| License | [MIT](LICENSE) |
-| Maintainer | [@brteduvn](https://github.com/brteduvn) |
-| Official contact | **admin@brt.edu.vn** |
-
-Contributions are welcome in Vietnamese or English. Report concrete defects using **anonymized** input examples. No fake metrics, unsupported AI claims or synthetic community evidence will be used for the OpenAI open-source application.
-
-**This is an early release candidate: please validate exported documents independently before using them for official school submissions.**
+Only this project is published to GitHub. Other connected/local projects remain local with separate Git/version/backup policy. No fabricated adoption, GitHub stars or PR history will be used in OpenAI program applications.

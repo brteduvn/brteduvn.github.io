@@ -1,0 +1,17 @@
+# Source text uses consistent line endings across Windows and CI
+*.ts text eol=lf
+*.tsx text eol=lf
+*.css text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.svg text eol=lf
+*.html text eol=lf
+*.ps1 text eol=crlf
+
+# Binary fixtures and assets must never undergo CRLF conversion
+*.pdf -text -diff
+*.docx -text -diff
+*.png -text -diff
+*.zip -text -diff
